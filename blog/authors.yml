@@ -23,3 +23,12 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+richardshi:
+  name: Richard Shi
+  title: Rising Senior, Marriotts Ridge High School
+  url: https://richard-shi-research.github.io
+  image_url: https://github.com/richardshi.png
+  page: true
+  socials:
+    x: richardshi

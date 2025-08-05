@@ -8,16 +8,37 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+
+}
+
+.heroGraph{
+  background-image: url('/img/banner_graph.png');
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: right;
+  height: 320px;
+
+}
+
+.heroTitle{
+  text-align: left !important; 
+}
+.heroSubTitle{
+  text-align: left !important; 
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 4rem;
   }
+  .heroGraph{
+  background-size:0%;
+}
 }
 
 .buttons {
   display: flex;
+  margin-top: 2rem;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }

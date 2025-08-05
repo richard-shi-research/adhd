@@ -4,8 +4,12 @@
   padding: 2rem 0;
   width: 100%;
 }
+.feature{
+  text-decoration: none;
+  padding: 32px 32px 0 16px
+}
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+ margin-bottom: 16px;
+  width: 100%;
 }

@@ -5,54 +5,76 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  // Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  img: string;
   description: ReactNode;
+  url: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Addressing the Critical Lack of Awareness',
+    // Svg: require('@site/static/img/f1.png').default,
+    img: 'img/f1.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Oftentimes, Despite the high prevalence of ADHD, public awareness and understanding of the condition remain insufficient, 
+        leading to misconceptions and inadequate support for those affected.
       </>
     ),
+    url:'/adhd/blog/paper-beyond-the-prescription#main-point-1-addressing-the-critical-lack-of-awareness'
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: ' Comprehensive Treatment Approaches',
+    // Svg: require('@site/static/img/f2.png').default,
+    img: 'img/f2.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The Boundaries of Effective ADHD Treatment Extend Far and Wide, encompassing a variety of Approaches Such as Medication, 
+        Cognitive-Behavioral Therapy, Emotional Regulation Strategies, and Structured Environmental Support.
       </>
     ),
+    url:'/adhd/blog/paper-beyond-the-prescription#main-point-2-comprehensive-treatment-approaches'
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Considering Medication Carefully',
+    // Svg: require('@site/static/img/f3.png').default,
+    img: 'img/f3.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        While medication has been proven to enhance attention and impulse control in individuals with ADHD, 
+        it often comes with negative side effects that raise concerns about long-term dependency and overall well-being.
       </>
     ),
+    url:'/adhd/blog/paper-beyond-the-prescription#main-point-3-considering-medication-carefully'
+  },
+  {
+    title: 'The Power of Long-Term Strategies',
+    // Svg: require('@site/static/img/f4.png').default,
+    img: 'img/f4.png',
+    description: (
+      <>
+        Due to the fact that ADHD symptoms manifest differently in each individual, 
+        long-term interventions—such as therapy and structured support systems—often provide more sustainable benefits compared to short-term medication alone.
+      </>
+    ),
+    url:'/adhd/blog/paper-beyond-the-prescription#main-point-4-the-power-of-long-term-strategies'
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, img, description, url}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <a href={url} className={clsx('col col--6', styles.feature)}>
+    <div >
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureSvg} src={img}  role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
     </div>
+    </a>
   );
 }
 
