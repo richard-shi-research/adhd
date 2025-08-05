@@ -12,7 +12,8 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className={clsx('container', styles.heroGraph)}>
+      <div className={styles.heroGraph}>
+      <div className={clsx('container')}>
         <Heading as="h1" className={clsx(styles.heroTitle)}>
           Beyond the Prescriptions: <br/>Rethinking ADHD for Long-Term Success
           {/* {siteConfig.title} */}
@@ -26,6 +27,7 @@ function HomepageHeader() {
             Read The Paper - 30min ⏱️
           </Link>
         </div>
+      </div>
       </div>
     </header>
   );

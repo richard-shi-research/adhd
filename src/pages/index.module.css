@@ -8,16 +8,18 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-
 }
 
 .heroGraph{
+  width: 100%;
+   align-items: center;
+  display: flex;
   background-image: url('/img/banner_graph.png');
   background-repeat: no-repeat;
-  background-size:contain;
-  background-position: right;
-  height: 320px;
-
+  background-size: auto 540px;
+  background-position: 80% 0%;
+  height: 480px;
+  margin: -4em 0;
 }
 
 .heroTitle{
