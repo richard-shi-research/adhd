@@ -7,7 +7,7 @@ export default function CommentSection() {
     const textColor = colorMode === 'dark' ? 'white' : 'black';
 
     useEffect(() => {
-        const box = commentBox('<replace with your id>', {
+        const box = commentBox('5734122580344832-proj', {
             textColor: textColor,
         });
         return () => box();
