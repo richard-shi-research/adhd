@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Richard Shi',
   tagline: 'A personal academic website on ADHD',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/fav.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -89,6 +89,7 @@ const config: Config = {
           label: 'About ME',
         },
         {to: '/blog', label: 'Research', position: 'left'},
+        {to: '/faq', label: 'FAQ', position: 'left'},
       ],
     },
     footer: {
@@ -120,12 +121,23 @@ const config: Config = {
             }
           ],
         },
+        {
+          title: 'Other',
+          items:[
+            {
+              label: 'FAQ',
+              to: '/faq'
+            }
+          ]
+        }
       ],
       // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      // theme: prismThemes.github,
+      // darkTheme: prismThemes.dracula,
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
     },
   } satisfies Preset.ThemeConfig,
 };
